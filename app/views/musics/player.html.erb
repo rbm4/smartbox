@@ -1,0 +1,20 @@
+<audio id="player" controls>
+  <% @musics.each do |music| %>
+    <source src="<%= music.music_file.url %>" type="audio/mp3">
+  <% end %>
+  <% @musics.each do |music| %>
+    <source src="<%= music.music_file.url %>" type="audio/mp3">
+  <% end %>
+</audio>
+
+
+
+<script>
+
+    $(document).ready(function() {
+        setInterval(function(){
+            let player = new Plyr('#player');
+            console.log(player)
+        },5000)
+    });
+</script>
