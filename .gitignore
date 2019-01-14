@@ -16,6 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/public/uploads/music/music_file
 
 # Ignore uploaded files in development
 /storage/*
