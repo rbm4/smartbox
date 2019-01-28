@@ -1,20 +1,7 @@
-<audio id="player" controls>
-  <% @musics.each do |music| %>
-    <source src="<%= music.music_file.url %>" type="audio/mp3">
-  <% end %>
-  <% @musics.each do |music| %>
-    <source src="<%= music.music_file.url %>" type="audio/mp3">
-  <% end %>
-</audio>
+<div id="player-container">
+  <%= render 'playerDynamic'%>
+</div>
 
 
 
-<script>
-
-    $(document).ready(function() {
-        setInterval(function(){
-            let player = new Plyr('#player');
-            console.log(player)
-        },5000)
-    });
-</script>
+<p data-id="<%= @music.id %>" id="properties"></p>

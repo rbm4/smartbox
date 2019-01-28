@@ -18,4 +18,16 @@
     </div>
   </div>
   <% end %>
+  <%= form_for @music, html: { multipart: true } do |k| %>
+  <div class=""col-sm-12>
+    <div class="form-group">
+      <%= k.label :external_link, "Caso preferir, insira um link do Youtube:" %>
+      <%= k.text_field :external_link, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= k.submit 'Enviar', class: 'btn btn-default' %>
+    </div>
+  </div>
+  <% end  %>
 </div>
